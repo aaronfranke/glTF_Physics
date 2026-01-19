@@ -155,14 +155,14 @@ The `geometry` object is used to specify the shape used for collision detection 
 | |Type|Description|
 |-|-|-|
 |**shape**|`integer`| The index of a top-level `KHR_implicit_shapes.shape`, providing an implicit representation of the geometry. |
-|**node**|`integer`| The index of a glTF `node` which provides a mesh representation of the geometry. |
+|**mesh**|`integer`| The index of a glTF `mesh` which provides a mesh representation of the geometry. |
 |**convexHull**|`boolean`|Flag to indicate that the geometry should be a convex hull.|
 
-Exactly one of `shape` or `node` should be provided.
+Exactly one of `shape` or `mesh` should be provided.
 
 The `shape` property indexes into the set of top-level collision shapes provided by the [KHR\_implicit\_shapes](../KHR_implicit_shapes/README.md) extension. The primitives provided by this extension allow for an implicit declaration of smooth surfaces with a minimal data footprint.
 
-Alternatively, a geometry can be specified by supplying the `node` parameter. In this scenario, the geometry should be determined by the `mesh` properties on the referenced `node`, including any child nodes. Implementations should include any mesh deformation due to use of the `skin` or `weights` properties on the `node` or the referenced `meshes`. A `geometry` object may refer to the same `node` that the `geometry` object is attached to, or it may reference any other `node`, including nodes which are not in the scene hierarchy.
+Alternatively, a geometry can be specified by supplying the `mesh` parameter, which indexes into the top-level `meshes` array in the glTF document, resulting in a collision geometry generated from the set of `mesh.primitives`. When the glTF `mesh` defines morph targets, the `mesh.weights` must be applied to the resulting collision geometry. If by some mechanism the `mesh.weights` change at runtime, an implementation may use the new weights to update the collision geometry.
 
 Collision shapes are parameterized in local space of the `node` they are associated with. If a shape is required to have an offset from the local space of the node the shape is associated with (for example a sphere _not_ centered at local origin or a rotated box,) a child node should be added with the desired offset applied, and the shape properties added to that child.
 
@@ -171,7 +171,7 @@ As [KHR\_implicit\_shapes](../KHR_implicit_shapes/README.md) prohibits degenerat
 > [!NOTE]
 > Existing simulation packages exhibit different behaviors as the size of a collision shape approaches zero; for example, an implementation may consider a shape degenerate despite having small, but non-zero scale. Interpolating scale by means of an animation or similar may generate transient scale values which trigger implementation-specific behavior.
 
-Physics simulations typically recommend against allowing collisions between pairs of triangulated mesh objects, preferring to collide pairs of convex shapes instead. To support this, the `geometry` may specify the `convexHull` property. When this flag is true, the geometry of the resulting object should be the convex hull of the referenced `node` or `shape`. Note that the shapes defined in [KHR\_implicit\_shapes](../KHR_implicit_shapes/README.md) are all convex, so this flag has no effect; however, future extensions may add additional concave shape types.
+Physics simulations typically recommend against allowing collisions between pairs of triangulated mesh objects, preferring to collide pairs of convex shapes instead. To support this, the `geometry` may specify the `convexHull` property. When this flag is true, the geometry of the resulting object should be the convex hull of the referenced `mesh` or `shape`. Note that the shapes defined in [KHR\_implicit\_shapes](../KHR_implicit_shapes/README.md) are all convex, so this flag has no effect; however, future extensions may add additional concave shape types.
 
 ```javascript
 "nodes": [
@@ -181,7 +181,7 @@ Physics simulations typically recommend against allowing collisions between pair
             "KHR_physics_rigid_bodies": {
                 "collider": {
                     "geometry": {
-                        "node": 0,
+                        "mesh": 0,
                         "convexHull": true
                     }
                 }
@@ -190,6 +190,8 @@ Physics simulations typically recommend against allowing collisions between pair
     }
 ]
 ```
+
+When using a `mesh` to provide collison geometry, the `convexHull` parameter is used to determine which `mesh.primitives` are considered to generate the collision geometry. When `convexHull` is `false`, only primitives containing triangles should be used, i.e. primitives with mode `TRIANGLES`, `TRIANGLE_STRIP` or `TRIANGLE_FAN` and a `mesh` should have at least one such primitive. When `convexHull` is `true`, the resulting geometry should enclose every `POSITION` described by all primitives.
 
 ### Physics Materials
 
