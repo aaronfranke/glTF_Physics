@@ -162,7 +162,7 @@ Exactly one of `shape` or `mesh` should be provided.
 
 The `shape` property indexes into the set of top-level collision shapes provided by the [KHR\_implicit\_shapes](../KHR_implicit_shapes/README.md) extension. The primitives provided by this extension allow for an implicit declaration of smooth surfaces with a minimal data footprint.
 
-Alternatively, a geometry can be specified by supplying the `mesh` parameter, which indexes into the top-level `meshes` array in the glTF document, resulting in a collision geometry generated from the set of `mesh.primitives`. When the glTF `mesh` defines morph targets, the `mesh.weights` must be applied to the resulting collision geometry. If by some mechanism the `mesh.weights` change at runtime, an implementation may use the new weights to update the collision geometry.
+Alternatively, a geometry can be specified by supplying the `mesh` parameter, which indexes into the top-level `meshes` array in the glTF document, resulting in a collision geometry generated from the set of `mesh.primitives`. When the glTF `mesh` defines morph targets, the `mesh.weights` must be applied to the resulting collision geometry.
 
 Collision shapes are parameterized in local space of the `node` they are associated with. If a shape is required to have an offset from the local space of the node the shape is associated with (for example a sphere _not_ centered at local origin or a rotated box,) a child node should be added with the desired offset applied, and the shape properties added to that child.
 
