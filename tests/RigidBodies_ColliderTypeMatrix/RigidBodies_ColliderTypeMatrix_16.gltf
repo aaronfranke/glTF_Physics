@@ -156,14 +156,11 @@
           },
           "collider": {
             "geometry": {
-              "node": 2
+              "mesh": 2
             }
           }
         }
       }
-    },
-    {
-      "mesh": 2
     }
   ],
   "scene": 0,

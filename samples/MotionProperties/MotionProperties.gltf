@@ -1,6 +1,6 @@
 {
 	"asset":{
-		"generator":"Khronos glTF Blender I/O v4.4.55",
+		"generator":"Khronos glTF Blender I/O v5.0.21",
 		"version":"2.0"
 	},
 	"extensionsUsed":[
@@ -89,14 +89,14 @@
 				1,
 				2,
 				3,
+				4,
 				5,
+				6,
 				7,
+				8,
 				9,
-				11,
-				13,
-				15,
-				16,
-				18
+				10,
+				11
 			]
 		}
 	],
@@ -185,27 +185,12 @@
 			]
 		},
 		{
-			"mesh":2,
-			"name":"physicsMeshDataNode",
-			"rotation":[
-				0,
-				0,
-				0,
-				1
-			],
-			"translation":[
-				0,
-				0,
-				0
-			]
-		},
-		{
 			"extensions":{
 				"KHR_physics_rigid_bodies":{
 					"collider":{
 						"geometry":{
 							"convexHull":false,
-							"node":4
+							"mesh":2
 						},
 						"physicsMaterial":0,
 						"collisionFilter":0
@@ -221,21 +206,6 @@
 			]
 		},
 		{
-			"mesh":3,
-			"name":"physicsMeshDataNode",
-			"rotation":[
-				0,
-				0,
-				0,
-				1
-			],
-			"translation":[
-				0,
-				0,
-				0
-			]
-		},
-		{
 			"extensions":{
 				"KHR_physics_rigid_bodies":{
 					"motion":{
@@ -245,7 +215,7 @@
 					"collider":{
 						"geometry":{
 							"convexHull":true,
-							"node":6
+							"mesh":3
 						},
 						"physicsMaterial":0,
 						"collisionFilter":0
@@ -272,21 +242,6 @@
 			]
 		},
 		{
-			"mesh":4,
-			"name":"physicsMeshDataNode",
-			"rotation":[
-				0,
-				0,
-				0,
-				1
-			],
-			"translation":[
-				0,
-				0,
-				0
-			]
-		},
-		{
 			"extensions":{
 				"KHR_physics_rigid_bodies":{
 					"motion":{
@@ -296,7 +251,7 @@
 					"collider":{
 						"geometry":{
 							"convexHull":true,
-							"node":8
+							"mesh":4
 						},
 						"physicsMaterial":0,
 						"collisionFilter":0
@@ -323,21 +278,6 @@
 			]
 		},
 		{
-			"mesh":5,
-			"name":"physicsMeshDataNode",
-			"rotation":[
-				0,
-				0,
-				0,
-				1
-			],
-			"translation":[
-				0,
-				0,
-				0
-			]
-		},
-		{
 			"extensions":{
 				"KHR_physics_rigid_bodies":{
 					"motion":{
@@ -347,7 +287,7 @@
 					"collider":{
 						"geometry":{
 							"convexHull":true,
-							"node":10
+							"mesh":5
 						},
 						"physicsMaterial":0,
 						"collisionFilter":0
@@ -374,21 +314,6 @@
 			]
 		},
 		{
-			"mesh":6,
-			"name":"physicsMeshDataNode",
-			"rotation":[
-				0,
-				0,
-				0,
-				1
-			],
-			"translation":[
-				0,
-				0,
-				0
-			]
-		},
-		{
 			"extensions":{
 				"KHR_physics_rigid_bodies":{
 					"motion":{
@@ -398,7 +323,7 @@
 					"collider":{
 						"geometry":{
 							"convexHull":true,
-							"node":12
+							"mesh":6
 						},
 						"physicsMaterial":0,
 						"collisionFilter":0
@@ -425,21 +350,6 @@
 			]
 		},
 		{
-			"mesh":7,
-			"name":"physicsMeshDataNode",
-			"rotation":[
-				0,
-				0,
-				0,
-				1
-			],
-			"translation":[
-				0,
-				0,
-				0
-			]
-		},
-		{
 			"extensions":{
 				"KHR_physics_rigid_bodies":{
 					"motion":{
@@ -460,7 +370,7 @@
 					"collider":{
 						"geometry":{
 							"convexHull":false,
-							"node":14
+							"mesh":7
 						},
 						"physicsMaterial":0,
 						"collisionFilter":0
@@ -512,21 +422,6 @@
 			]
 		},
 		{
-			"mesh":9,
-			"name":"physicsMeshDataNode",
-			"rotation":[
-				0,
-				0,
-				0,
-				1
-			],
-			"translation":[
-				0,
-				0,
-				0
-			]
-		},
-		{
 			"extensions":{
 				"KHR_physics_rigid_bodies":{
 					"motion":{
@@ -546,7 +441,7 @@
 					"collider":{
 						"geometry":{
 							"convexHull":true,
-							"node":17
+							"mesh":9
 						},
 						"physicsMaterial":0,
 						"collisionFilter":0

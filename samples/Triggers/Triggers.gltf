@@ -1,6 +1,6 @@
 {
 	"asset":{
-		"generator":"Khronos glTF Blender I/O v4.4.55",
+		"generator":"Khronos glTF Blender I/O v5.0.21",
 		"version":"2.0"
 	},
 	"extensionsUsed":[
@@ -73,8 +73,8 @@
 				0,
 				1,
 				2,
-				4,
-				11
+				3,
+				7
 			]
 		}
 	],
@@ -134,21 +134,6 @@
 			]
 		},
 		{
-			"mesh":1,
-			"name":"physicsMeshDataNode",
-			"rotation":[
-				0,
-				0,
-				0,
-				1
-			],
-			"translation":[
-				0,
-				0,
-				0
-			]
-		},
-		{
 			"extensions":{
 				"KHR_physics_rigid_bodies":{
 					"motion":{
@@ -157,7 +142,7 @@
 					"collider":{
 						"geometry":{
 							"convexHull":true,
-							"node":3
+							"mesh":1
 						},
 						"physicsMaterial":1,
 						"collisionFilter":0
@@ -173,27 +158,12 @@
 			]
 		},
 		{
-			"mesh":2,
-			"name":"physicsMeshDataNode",
-			"rotation":[
-				0,
-				0,
-				0,
-				1
-			],
-			"translation":[
-				0,
-				0,
-				0
-			]
-		},
-		{
 			"extensions":{
 				"KHR_physics_rigid_bodies":{
 					"trigger":{
 						"geometry":{
 							"convexHull":true,
-							"node":5
+							"mesh":2
 						},
 						"collisionFilter":0
 					}
@@ -214,27 +184,12 @@
 			]
 		},
 		{
-			"mesh":3,
-			"name":"physicsMeshDataNode",
-			"rotation":[
-				0,
-				0,
-				0,
-				1
-			],
-			"translation":[
-				0,
-				0,
-				0
-			]
-		},
-		{
 			"extensions":{
 				"KHR_physics_rigid_bodies":{
 					"trigger":{
 						"geometry":{
 							"convexHull":true,
-							"node":7
+							"mesh":3
 						},
 						"collisionFilter":0
 					}
@@ -255,27 +210,12 @@
 			]
 		},
 		{
-			"mesh":4,
-			"name":"physicsMeshDataNode",
-			"rotation":[
-				0,
-				0,
-				0,
-				1
-			],
-			"translation":[
-				0,
-				0,
-				0
-			]
-		},
-		{
 			"extensions":{
 				"KHR_physics_rigid_bodies":{
 					"trigger":{
 						"geometry":{
 							"convexHull":true,
-							"node":9
+							"mesh":4
 						},
 						"collisionFilter":0
 					}
@@ -297,9 +237,9 @@
 		},
 		{
 			"children":[
-				6,
-				8,
-				10
+				4,
+				5,
+				6
 			],
 			"name":"Triggers"
 		}

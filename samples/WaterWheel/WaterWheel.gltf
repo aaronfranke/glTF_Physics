@@ -1,6 +1,6 @@
 {
 	"asset":{
-		"generator":"Khronos glTF Blender I/O v4.5.47",
+		"generator":"Khronos glTF Blender I/O v5.0.21",
 		"version":"2.0"
 	},
 	"extensionsUsed":[
@@ -201,10 +201,16 @@
 		{
 			"name":"Scene",
 			"nodes":[
+				2,
 				3,
-				4,
-				8,
-				10,
+				6,
+				7,
+				11,
+				12,
+				13,
+				14,
+				15,
+				16,
 				17,
 				18,
 				19,
@@ -213,13 +219,7 @@
 				22,
 				23,
 				24,
-				25,
-				26,
-				27,
-				28,
-				30,
-				31,
-				32
+				25
 			]
 		}
 	],
@@ -261,21 +261,6 @@
 			]
 		},
 		{
-			"mesh":0,
-			"name":"physicsMeshDataNode",
-			"rotation":[
-				0,
-				0,
-				0,
-				1
-			],
-			"translation":[
-				0,
-				0,
-				0
-			]
-		},
-		{
 			"children":[
 				1
 			],
@@ -303,7 +288,7 @@
 					"collider":{
 						"geometry":{
 							"convexHull":false,
-							"node":2
+							"mesh":0
 						},
 						"physicsMaterial":0,
 						"collisionFilter":0
@@ -359,7 +344,7 @@
 			"extensions":{
 				"KHR_physics_rigid_bodies":{
 					"joint":{
-						"connectedNode":5,
+						"connectedNode":4,
 						"joint":1
 					}
 				}
@@ -378,23 +363,8 @@
 			]
 		},
 		{
-			"mesh":2,
-			"name":"physicsMeshDataNode",
-			"rotation":[
-				0,
-				0,
-				0,
-				1
-			],
-			"translation":[
-				0,
-				0,
-				0
-			]
-		},
-		{
 			"children":[
-				6
+				5
 			],
 			"extensions":{
 				"KHR_physics_rigid_bodies":{
@@ -404,7 +374,7 @@
 					"collider":{
 						"geometry":{
 							"convexHull":true,
-							"node":7
+							"mesh":2
 						},
 						"physicsMaterial":0,
 						"collisionFilter":0
@@ -415,21 +385,6 @@
 			"name":"Sign"
 		},
 		{
-			"mesh":3,
-			"name":"physicsMeshDataNode",
-			"rotation":[
-				0,
-				0,
-				0,
-				1
-			],
-			"translation":[
-				0,
-				0,
-				0
-			]
-		},
-		{
 			"extensions":{
 				"KHR_physics_rigid_bodies":{
 					"motion":{
@@ -437,14 +392,14 @@
 						"mass":1,
 						"angularVelocity":[
 							0,
-							-6,
+							6,
 							0
 						]
 					},
 					"collider":{
 						"geometry":{
 							"convexHull":false,
-							"node":9
+							"mesh":3
 						},
 						"physicsMaterial":0,
 						"collisionFilter":2
@@ -464,27 +419,12 @@
 			]
 		},
 		{
-			"mesh":4,
-			"name":"physicsMeshDataNode",
-			"rotation":[
-				0,
-				0,
-				0,
-				1
-			],
-			"translation":[
-				0,
-				0,
-				0
-			]
-		},
-		{
 			"extensions":{
 				"KHR_physics_rigid_bodies":{
 					"collider":{
 						"geometry":{
 							"convexHull":false,
-							"node":11
+							"mesh":4
 						},
 						"physicsMaterial":0,
 						"collisionFilter":3
@@ -495,30 +435,12 @@
 			"name":"Water_Wheel_Track_01"
 		},
 		{
-			"mesh":5,
-			"name":"physicsMeshDataNode",
-			"rotation":[
-				0,
-				0,
-				0,
-				1
-			],
-			"translation":[
-				0,
-				0,
-				0
-			]
-		},
-		{
-			"children":[
-				0
-			],
 			"extensions":{
 				"KHR_physics_rigid_bodies":{
 					"collider":{
 						"geometry":{
 							"convexHull":false,
-							"node":13
+							"mesh":5
 						},
 						"physicsMaterial":0,
 						"collisionFilter":3
@@ -529,30 +451,12 @@
 			"name":"WaterWheel_Structure_01"
 		},
 		{
-			"mesh":6,
-			"name":"physicsMeshDataNode",
-			"rotation":[
-				0,
-				0,
-				0,
-				1
-			],
-			"translation":[
-				0,
-				0,
-				0
-			]
-		},
-		{
-			"children":[
-				5
-			],
 			"extensions":{
 				"KHR_physics_rigid_bodies":{
 					"collider":{
 						"geometry":{
 							"convexHull":false,
-							"node":15
+							"mesh":6
 						},
 						"physicsMaterial":0,
 						"collisionFilter":3
@@ -564,9 +468,11 @@
 		},
 		{
 			"children":[
-				12,
-				14,
-				16
+				8,
+				9,
+				10,
+				0,
+				4
 			],
 			"extensions":{},
 			"name":"Structure"
@@ -797,27 +703,12 @@
 			]
 		},
 		{
-			"mesh":14,
-			"name":"physicsMeshDataNode",
-			"rotation":[
-				0,
-				0,
-				0,
-				1
-			],
-			"translation":[
-				0,
-				0,
-				0
-			]
-		},
-		{
 			"extensions":{
 				"KHR_physics_rigid_bodies":{
 					"collider":{
 						"geometry":{
 							"convexHull":false,
-							"node":29
+							"mesh":14
 						},
 						"physicsMaterial":1,
 						"collisionFilter":4

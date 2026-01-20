@@ -142,14 +142,11 @@
         "KHR_physics_rigid_bodies": {
           "collider": {
             "geometry": {
-              "node": 1
+              "mesh": 1
             }
           }
         }
       }
-    },
-    {
-      "mesh": 1
     },
     {
       "mesh": 2,
@@ -177,7 +174,7 @@
     {
       "nodes": [
         0,
-        2
+        1
       ]
     }
   ],

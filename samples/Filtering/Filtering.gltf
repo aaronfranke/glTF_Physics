@@ -1,6 +1,6 @@
 {
 	"asset":{
-		"generator":"Khronos glTF Blender I/O v4.4.55",
+		"generator":"Khronos glTF Blender I/O v5.0.21",
 		"version":"2.0"
 	},
 	"extensionsUsed":[
@@ -99,11 +99,11 @@
 				3,
 				4,
 				5,
+				12,
+				13,
 				14,
 				15,
-				16,
-				17,
-				18
+				16
 			]
 		}
 	],
@@ -229,27 +229,12 @@
 			]
 		},
 		{
-			"mesh":5,
-			"name":"physicsMeshDataNode",
-			"rotation":[
-				0,
-				0,
-				0,
-				1
-			],
-			"translation":[
-				0,
-				0,
-				0
-			]
-		},
-		{
 			"extensions":{
 				"KHR_physics_rigid_bodies":{
 					"collider":{
 						"geometry":{
 							"convexHull":true,
-							"node":6
+							"mesh":5
 						},
 						"physicsMaterial":0,
 						"collisionFilter":1
@@ -265,27 +250,12 @@
 			]
 		},
 		{
-			"mesh":6,
-			"name":"physicsMeshDataNode",
-			"rotation":[
-				0,
-				0,
-				0,
-				1
-			],
-			"translation":[
-				0,
-				0,
-				0
-			]
-		},
-		{
 			"extensions":{
 				"KHR_physics_rigid_bodies":{
 					"collider":{
 						"geometry":{
 							"convexHull":true,
-							"node":8
+							"mesh":6
 						},
 						"physicsMaterial":0,
 						"collisionFilter":2
@@ -358,12 +328,12 @@
 		},
 		{
 			"children":[
+				6,
 				7,
+				8,
 				9,
 				10,
-				11,
-				12,
-				13
+				11
 			],
 			"extensions":{
 				"KHR_physics_rigid_bodies":{
